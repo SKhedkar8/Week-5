@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .animated-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007BFF;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+            animation: pulsate 2s infinite;
+        }
+
+        .animated-button:hover {
+            background-color: #0056b3;
+            color: #f0f0f0;
+            border: 2px solid #0056b3;
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="animated-button">Hover Me!</button>
+</body>
+</html>
